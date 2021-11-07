@@ -63,32 +63,13 @@ public class RegisterViewModel extends BaseObservable {
         contentValues.put("email", user.getEmail());
         contentValues.put("dni", user.getDni());
         contentValues.put("state", 1);
-        String _name = user.getName();
 
         Long id = db.insert("user", "id_user", contentValues);
         Toast.makeText(context.getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
         db.close();
 
-       /* String res = "";
-        ConnectionSQLite c = new ConnectionSQLite(context.getApplicationContext(), "bd_trabajoapp", null, 1, null);
-        SQLiteDatabase bd = c.getReadableDatabase();
-
-        Cursor cursor = bd.rawQuery(" SELECT*FROM user WHERE id_user = ?", new String[]{"12345"});
-
-        if (!cursor.moveToLast()) Log.i("Error", "Error");
-        else {
-            cursor.moveToLast();
-            res += "id: " + cursor.getInt(0) + "\n";
-            res += "username: " + cursor.getString(1) + "\n";
-            res += "password: " + cursor.getString(2) + "\n";
-        }
-
-        Log.i("Consulta", res);*/
-
         Intent intent = new Intent(context, UsersRegister.class);
         context.startActivity(intent);
 
     }
-
-
 }

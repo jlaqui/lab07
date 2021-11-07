@@ -24,7 +24,6 @@ public class ConnectionSQLite extends SQLiteOpenHelper {
                         "  lastname char(60) NOT NULL,\n" +
                         "  email char(120) NOT NULL,\n" +
                         "  dni char(30) NOT NULL,\n" +
-                        "  url_profile blob,\n" +
                         "  state char(1) NOT NULL,\n" +
                         "  CONSTRAINT PK_User PRIMARY KEY (id_user),\n" +
                         "  CONSTRAINT id_user UNIQUE (id_user)\n" +

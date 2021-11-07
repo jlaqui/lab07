@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabajo">
         <activity
+            android:name=".UsersRegister"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
